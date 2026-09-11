@@ -1,10 +1,22 @@
 public class Student {
     //variable
-    String studentID;
-    String name;
+    private String studentID;
+    private String name;
     double[]gpa = new double[6];
-    double a_gpa;
-    String degree;
+    private double a_gpa;
+    private String degree;
+    
+    
+    //setter
+        void setValue(String studentID, String name){
+            this.studentID = studentID;
+            this.name = name;
+        }
+        
+    //getter
+        void getValue{
+        
+        }
     
     //method
     void averageGPA(){
@@ -14,6 +26,7 @@ public class Student {
         }
         a_gpa = sum/6;
     }
+    
     
     void determineDegree(){
            if(a_gpa<0 || a_gpa>4){

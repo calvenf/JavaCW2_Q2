@@ -9,16 +9,19 @@ public class StudentAcademicTracker {
         
         // Request user enter student's details
         System.out.print("Your studentID: ");
-        s1.studentID = input.nextLine();
+        String studentID = input.nextLine();
         System.out.print("Your name: ");
-        s1.name = input.nextLine();
+        String name = input.nextLine();
+        
+        // Use setter
+        s1.setValue(studentID, name);
+        
         
         // Request user to enter GPA values
         for (int i=0;i<6;i++){
-            System.out.print("GPA values of subject "+(i+1)+":");
-            s1.gpa[i]=input.nextDouble();
+                System.out.print("GPA values of subject "+(i+1)+":");
+                s1.gpa[i]=input.nextDouble();
         }
-        
 
         
         
