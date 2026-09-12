@@ -2,7 +2,7 @@ public class Student {
     // 1. variable
         private String studentID;
         private String name;
-        double[]gpa = new double[6];
+        private double[]gpa = new double[6];
         private double a_gpa;
         private String degree;
     
