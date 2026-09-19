@@ -41,16 +41,15 @@ public class Driver {
                     // Request user enter studentID
                         System.out.print("Your studentID: ");
                         String studentID = input.nextLine();
-
+                        // Use setter to set studentID
+                            s1.setID(studentID);
+                            
                     // Request user enter student name
                         System.out.print("Your name: ");
                         String name = input.nextLine();
-                    
-                    // Use setter to set studentID
-                        s1.setID(studentID);
-                    // Use setter to set student name
-                        s1.setName(name);
-
+                        // Use setter to set student name
+                            s1.setName(name);
+       
                     // Request user to enter GPA values
                         double[]gpa = new double[6];
                         for (int i=0; i<gpa.length;i++){
@@ -63,6 +62,11 @@ public class Driver {
                                     gpa[i]=input.nextDouble();
                                 }
                         }
+                    // Request user enter credits
+                        System.out.print("Your total credits: ");
+                        int credits = input.nextInt();
+                        // Use setter to set credits
+                            s1.setCredits(credits);
                     break;
                     
                 default:
