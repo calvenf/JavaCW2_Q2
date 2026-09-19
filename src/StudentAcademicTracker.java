@@ -66,7 +66,7 @@ public class StudentAcademicTracker {
             public double averageGPA(){
                 double sum=0;
                 for (int i=0;i<6;i++){
-                    sum=sum+gpa[i];
+                    sum=sum+(gpa[i]*(credits/6));
                 }
                 return sum/credits;
             }
