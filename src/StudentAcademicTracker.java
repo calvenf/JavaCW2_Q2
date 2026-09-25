@@ -1,5 +1,4 @@
 public class StudentAcademicTracker {
-    // 1. variable
         private String studentID;
         private String name;
         private double[]gpa = new double[6];
@@ -13,17 +12,16 @@ public class StudentAcademicTracker {
             this.credits=credits;
         }
    
-    // 2. setter
+    // setter
     
-        // Set studentID
             public void setID(String studentID) {
                 this.studentID = studentID;
             }
-        // Set student name
+
             public void setName(String name) {
                 this.name = name;
             }
-        // Set GPA value for 6 semesters
+
             public boolean setGPA(double[]gpa,int index){
                 if(gpa[index]>=0 && gpa[index]<=4){
                     this.gpa[index]=gpa[index];
@@ -33,45 +31,43 @@ public class StudentAcademicTracker {
                     return false;
                 }
             }
-        // Set credits value
+
             public void setCredits(int credits) {
                 this.credits = credits;
             }
         
-    // 3. getter
+    // getter
             
-        // Get student id
+
             public String getID() {
                 return studentID;
             }
 
-        // Get student name
+
             public String getName(){
                     return name;
             }
 
-        // Get gpa
+
             public double getGpa(int i) {
                 return gpa[i];
             }
 
-        // Get credits
+
             public int getCredits() {
                 return credits;
             }
             
-    // 4. method
-            
-        // Calculate average GPA for 6 semesters
+    // method
+
             public double averageGPA(){
                 double sum=0;
                 for (int i=0;i<6;i++){
-                    sum=sum+(gpa[i]*(credits/6));
+                    sum=sum+gpa[i];
                 }
-                return sum/credits;
+                return sum;
             }
 
-        // Determine degree classification based on average GPA
             public String determineDegree(){
                     if (averageGPA()<2.5){
                         return "Third Class"; 
